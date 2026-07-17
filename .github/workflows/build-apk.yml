@@ -23,12 +23,13 @@ jobs:
       - name: Build APK
         run: |
           yes | flet build apk \
-            --project "报价工具" \
+            --project "quote_tool" \
             --artifact "报价工具" \
             --org "com.acrylic" \
             --product "报价工具" \
-            --description "亚克力箱子报价计算工具" \
-            --no-android-splash
+            --description "Acrylic box quote calculator" \
+            --no-android-splash \
+            --no-compile-app
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
